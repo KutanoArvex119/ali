@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-id="th-modified">Ali Akan — Learning to Code by Building Games</title>
+<title data-id="th-modified">Ali Akan</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/daisyui.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css">
@@ -980,63 +980,10 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </section>
 
-  <!-- ============ LEARN : how the game works ============ -->
-  <section id="learn" class="max-w-5xl mx-auto px-6 pb-24">
-    <h2 class="text-2xl font-bold font-mono text-sky-neon mb-2">// nasılçalışır</h2>
-    <p class="text-paper/60 mb-10 max-w-2xl   ablefocused">The same code that runs above, explained in plain English. This is the part I'd want a tutor to walk me through.</p>
-
-    <div class="space-y-6">
-      <div class="reveal border border-slate-deep rounded-lg p-6 bg-slate-deep/30 visible">
-        <h3 class="font-mono text-mint mb-2">1. The game loop</h3>
-        <p class="text-paper/70 text-sm leading-relaxed">Every <span class="font-mono text-sky-neon">120ms</span>, a function called <span class="font-mono text-sky-neon">step()</span> runs. It moves the snake one cell, checks whether it hit a wall or itself, and redraws the board. Every game you'll ever build is some version of this loop: <em>update state, check rules, draw</em>.</p>
-      </div>
-
-      <div class="reveal border border-slate-deep rounded-lg p-6 bg-slate-deep/30 visible">
-        <h3 class="font-mono text-mint mb-2">2. The snake is just an array</h3>
-        <p class="text-paper/70 text-sm leading-relaxed"><span class="font-mono text-sky-neon">snake</span> is an array of <span class="font-mono text-sky-neon">{x, y}</span> objects. Moving means adding a new head to the front (<span class="font-mono text-sky-neon">unshift</span>) and removing the tail (<span class="font-mono text-sky-neon">pop</span>) — unless you just ate food, in which case the tail stays and you grow.</p>
-      </div>
-
-      <div class="reveal border border-slate-deep rounded-lg p-6 bg-slate-deep/30">
-        <h3 class="font-mono text-mint mb-2">3. The canvas is a paintbrush</h3>
-        <p class="text-paper/70 text-sm leading-relaxed">The <span class="font-mono text-sky-neon">&lt;canvas&gt;</span> element gives us a blank grid of pixels. JavaScript draws every frame from scratch: a checkerboard background, a glowing circle for food, and rectangles for the snake. Nothing is stored as an image — it's all math.</p>
-      </div>
-
-      <div class="reveal border border-slate-deep rounded-lg p-6 bg-slate-deep/30">
-        <h3 class="font-mono text-mint mb-2">4. Input is just events</h3>
-        <p class="text-paper/70 text-sm leading-relaxed">When you press a key, the browser fires an event. We listen for it, translate the key into a direction, and queue the turn so it happens on the next tick. The same idea powers the on-screen buttons — a click is just another event.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ NEXT : 3 features to add ============ -->
-  <section id="next" class="max-w-5xl mx-auto px-6 pb-24">
-    <h2 class="text-2xl font-bold font-mono text-mint mb-2">// what's next</h2>
-    <p class="text-paper/60 mb-10 max-w-2xl">Three features I'm planning to add — each one teaches a new JavaScript skill.</p>
-
-    <ol class="grid md:grid-cols-3 gap-6">
-      <li class="reveal border border-mint/30 rounded-lg p-6">
-        <span class="font-mono text-3xl text-mint/40">01</span>
-        <h3 class="font-mono text-sky-neon mt-2 mb-2">Speed levels</h3>
-        <p class="text-paper/60 text-sm leading-relaxed">Make the snake faster every time it eats. Skill: working with timers and difficulty curves — great first step into game design.</p>
-      </li>
-      <li class="reveal border border-sky-neon/30 rounded-lg p-6">
-        <span class="font-mono text-3xl text-sky-neon/40">02</span>
-        <h3 class="font-mono text-mint mt-2 mb-2">Sound effects</h3>
-        <p class="text-paper/60 text-sm leading-relaxed">A beep when you eat, a sad tone when you crash. Skill: the Web Audio API — playing and generating sounds with pure JavaScript.</p>
-      </li>
-      <li class="reveal border border-mint/30 rounded-lg p-6">
-        <span class="font-mono text-3xl text-mint/40">03</span>
-        <h3 class="font-mono text-sky-neon mt-2 mb-2">Golden food</h3>
-        <p class="text-paper/60 text-sm leading-relaxed">A rare bonus item worth 5 points that disappears after a few seconds. Skill: timeouts, random chance, and game state beyond just "snake + food".</p>
-      </li>
-    </ol>
-  </section>
-
   <!-- ============ FOOTER ============ -->
   <footer class="border-t border-mint/20">
     <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="font-mono text-xs text-paper/40">built by Ali Akan — one HTML file, zero frameworks</p>
-      <p class="font-mono text-xs text-mint/60">HTML + CSS + JS <span class="text-paper/30">·</span> <span class="blink">▌</span></p>
+      <p class="font-mono text-xs text-paper/40">Ali</p>
     </div>
   </footer>
 
