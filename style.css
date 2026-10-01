@@ -1,0 +1,50 @@
+
+  /* ---------- Page-level styling ---------- */
+  html { scroll-behavior: smooth; }
+  body { background: #0A0F0D; }
+
+  /* Soft animated glow behind the game board */
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 24px rgba(16, 185, 129, 0.18); }
+    50%      { box-shadow: 0 0 44px rgba(56, 189, 248, 0.28); }
+  }
+  .game-glow { animation: pulse-glow 4s ease-in-out infinite; }
+
+  /* Gentle fade-up when sections enter the viewport */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* Neon text shimmer for the big title */
+  @keyframes shimmer {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .neon-text {
+    background: linear-gradient(90deg, #10B981, #38BDF8, #10B981);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  /* Blinking "insert coin" style prompt */
+  @keyframes blink { 50% { opacity: 0; } }
+  .blink { animation: blink 1.2s step-end infinite; }
+
+  /* Control buttons light up when pressed */
+  .dpad-btn {
+    transition: transform 0.1s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  }
+  .dpad-btn:active, .dpad-btn.pressed {
+    background-color: #10B981;
+    color: #0A0F0D;
+    transform: scale(0.92);
+    box-shadow: 0 0 18px rgba(16, 185, 129, 0.6);
+  }
+
+  canvas { image-rendering: pixelated; }
