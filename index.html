@@ -1,986 +1,111 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-id="th-modified">Ali Akan</title>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/daisyui.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
-@layer properties;
-@layer theme, base, components, utilities;
-@layer theme {
-  :root, :host {
-    --font-sans: "Space Grotesk", sans-serif;
-    --font-mono: "JetBrains Mono", monospace;
-    --spacing: 0.25rem;
-    --container-xs: 20rem;
-    --container-2xl: 42rem;
-    --container-5xl: 64rem;
-    --text-xs: 0.75rem;
-    --text-xs--line-height: calc(1 / 0.75);
-    --text-sm: 0.875rem;
-    --text-sm--line-height: calc(1.25 / 0.875);
-    --text-base: 1rem;
-    --text-base--line-height: calc(1.5 / 1);
-    --text-lg: 1.125rem;
-    --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-5xl: 3rem;
-    --text-5xl--line-height: 1;
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
-    --font-weight-bold: 700;
-    --leading-tight: 1.25;
-    --leading-relaxed: 1.625;
-    --radius-lg: 0.5rem;
-    --blur-sm: 8px;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --default-font-family: var(--font-sans);
-    --default-mono-font-family: var(--font-mono);
-    --color-mint: #10B981;
-    --color-slate-deep: #1E293B;
-    --color-sky-neon: #38BDF8;
-    --color-ink: #0A0F0D;
-    --color-paper: #FFFFFF;
-  }
-}
-@layer base {
-  *, ::after, ::before, ::backdrop, ::file-selector-button {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0 solid;
-  }
-  html, :host {
-    line-height: 1.5;
-    -webkit-text-size-adjust: 100%;
-    tab-size: 4;
-    font-family: var(--default-font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
-    font-feature-settings: var(--default-font-feature-settings, normal);
-    font-variation-settings: var(--default-font-variation-settings, normal);
-    -webkit-tap-highlight-color: transparent;
-  }
-  hr {
-    height: 0;
-    color: inherit;
-    border-top-width: 1px;
-  }
-  abbr:where([title]) {
-    -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: inherit;
-  }
-  a {
-    color: inherit;
-    -webkit-text-decoration: inherit;
-    text-decoration: inherit;
-  }
-  b, strong {
-    font-weight: bolder;
-  }
-  code, kbd, samp, pre {
-    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
-    font-feature-settings: var(--default-mono-font-feature-settings, normal);
-    font-variation-settings: var(--default-mono-font-variation-settings, normal);
-    font-size: 1em;
-  }
-  small {
-    font-size: 80%;
-  }
-  sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-  sub {
-    bottom: -0.25em;
-  }
-  sup {
-    top: -0.5em;
-  }
-  table {
-    text-indent: 0;
-    border-color: inherit;
-    border-collapse: collapse;
-  }
-  :-moz-focusring:where(:not(iframe)) {
-    outline: auto;
-  }
-  progress {
-    vertical-align: baseline;
-  }
-  summary {
-    display: list-item;
-  }
-  ol, ul, menu {
-    list-style: none;
-  }
-  img, svg, video, canvas, audio, iframe, embed, object {
-    display: block;
-    vertical-align: middle;
-  }
-  img, video {
-    max-width: 100%;
-    height: auto;
-  }
-  button, input, select, optgroup, textarea, ::file-selector-button {
-    font: inherit;
-    font-feature-settings: inherit;
-    font-variation-settings: inherit;
-    letter-spacing: inherit;
-    color: inherit;
-    border-radius: 0;
-    background-color: transparent;
-    opacity: 1;
-  }
-  :where(select:is([multiple], [size])) optgroup {
-    font-weight: bolder;
-  }
-  :where(select:is([multiple], [size])) optgroup option {
-    padding-inline-start: 20px;
-  }
-  ::file-selector-button {
-    margin-inline-end: 4px;
-  }
-  ::placeholder {
-    opacity: 1;
-  }
-  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
-    ::placeholder {
-      color: currentcolor;
-      @supports (color: color-mix(in lab, red, red)) {
-        color: color-mix(in oklab, currentcolor 50%, transparent);
-      }
-    }
-  }
-  textarea {
-    resize: vertical;
-  }
-  ::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-  ::-webkit-date-and-time-value {
-    min-height: 1lh;
-    text-align: inherit;
-  }
-  ::-webkit-datetime-edit {
-    display: inline-flex;
-  }
-  ::-webkit-datetime-edit-fields-wrapper {
-    padding: 0;
-  }
-  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
-    padding-block: 0;
-  }
-  ::-webkit-calendar-picker-indicator {
-    line-height: 1;
-  }
-  :-moz-ui-invalid {
-    box-shadow: none;
-  }
-  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
-    appearance: button;
-  }
-  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
-    height: auto;
-  }
-  [hidden]:where(:not([hidden='until-found'])) {
-    display: none !important;
-  }
-}
-@layer utilities {
-  .visible {
-    visibility: visible;
-  }
-  .absolute {
-    position: absolute;
-  }
-  .relative {
-    position: relative;
-  }
-  .inset-0 {
-    inset: 0px;
-  }
-  .mx-auto {
-    margin-inline: auto;
-  }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
-  }
-  .mt-4 {
-    margin-top: calc(var(--spacing) * 4);
-  }
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
-  }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
-  }
-  .mt-12 {
-    margin-top: calc(var(--spacing) * 12);
-  }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
-  }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
-  }
-  .block {
-    display: block;
-  }
-  .flex {
-    display: flex;
-  }
-  .grid {
-    display: grid;
-  }
-  .hidden {
-    display: none;
-  }
-  .inline-block {
-    display: inline-block;
-  }
-  .h-auto {
-    height: auto;
-  }
-  .w-fit {
-    width: fit-content;
-  }
-  .w-full {
-    width: 100%;
-  }
-  .max-w-2xl {
-    max-width: var(--container-2xl);
-  }
-  .max-w-5xl {
-    max-width: var(--container-5xl);
-  }
-  .max-w-full {
-    max-width: 100%;
-  }
-  .max-w-xs {
-    max-width: var(--container-xs);
-  }
-  .flex-1 {
-    flex: 1;
-  }
-  .shrink-0 {
-    flex-shrink: 0;
-  }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .flex-col {
-    flex-direction: column;
-  }
-  .items-baseline {
-    align-items: baseline;
-  }
-  .items-center {
-    align-items: center;
-  }
-  .items-start {
-    align-items: flex-start;
-  }
-  .justify-between {
-    justify-content: space-between;
-  }
-  .justify-center {
-    justify-content: center;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
-  }
-  .gap-6 {
-    gap: calc(var(--spacing) * 6);
-  }
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
-  }
-  :where(.space-y-2 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  :where(.space-y-6 > :not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
-  }
-  .rounded {
-    border-radius: 0.25rem;
-  }
-  .rounded-lg {
-    border-radius: var(--radius-lg);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .border-t {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 1px;
-  }
-  .border-b {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
-  }
-  .border-none {
-    --tw-border-style: none;
-    border-style: none;
-  }
-  .border-mint {
-    border-color: var(--color-mint);
-  }
-  .border-mint\/20 {
-    border-color: color-mix(in srgb, #10B981 20%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-mint) 20%, transparent);
-    }
-  }
-  .border-mint\/30 {
-    border-color: color-mix(in srgb, #10B981 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-mint) 30%, transparent);
-    }
-  }
-  .border-mint\/40 {
-    border-color: color-mix(in srgb, #10B981 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-mint) 40%, transparent);
-    }
-  }
-  .border-sky-neon\/30 {
-    border-color: color-mix(in srgb, #38BDF8 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-sky-neon) 30%, transparent);
-    }
-  }
-  .border-sky-neon\/40 {
-    border-color: color-mix(in srgb, #38BDF8 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-sky-neon) 40%, transparent);
-    }
-  }
-  .border-slate-deep {
-    border-color: var(--color-slate-deep);
-  }
-  .bg-ink {
-    background-color: var(--color-ink);
-  }
-  .bg-ink\/90 {
-    background-color: color-mix(in srgb, #0A0F0D 90%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-ink) 90%, transparent);
-    }
-  }
-  .bg-mint {
-    background-color: var(--color-mint);
-  }
-  .bg-slate-deep\/30 {
-    background-color: color-mix(in srgb, #1E293B 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-deep) 30%, transparent);
-    }
-  }
-  .bg-transparent {
-    background-color: transparent;
-  }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
-  .p-6 {
-    padding: calc(var(--spacing) * 6);
-  }
-  .px-6 {
-    padding-inline: calc(var(--spacing) * 6);
-  }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
-  }
-  .py-5 {
-    padding-block: calc(var(--spacing) * 5);
-  }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
-  }
-  .pt-20 {
-    padding-top: calc(var(--spacing) * 20);
-  }
-  .pb-16 {
-    padding-bottom: calc(var(--spacing) * 16);
-  }
-  .pb-24 {
-    padding-bottom: calc(var(--spacing) * 24);
-  }
-  .font-mono {
-    font-family: var(--font-mono);
-  }
-  .font-sans {
-    font-family: var(--font-sans);
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-  .text-base {
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-  }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
-  }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
-  .leading-relaxed {
-    --tw-leading: var(--leading-relaxed);
-    line-height: var(--leading-relaxed);
-  }
-  .leading-tight {
-    --tw-leading: var(--leading-tight);
-    line-height: var(--leading-tight);
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
-  .text-ink {
-    color: var(--color-ink);
-  }
-  .text-mint {
-    color: var(--color-mint);
-  }
-  .text-mint\/40 {
-    color: color-mix(in srgb, #10B981 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-mint) 40%, transparent);
-    }
-  }
-  .text-mint\/60 {
-    color: color-mix(in srgb, #10B981 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-mint) 60%, transparent);
-    }
-  }
-  .text-paper {
-    color: var(--color-paper);
-  }
-  .text-paper\/30 {
-    color: color-mix(in srgb, #FFFFFF 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-paper) 30%, transparent);
-    }
-  }
-  .text-paper\/40 {
-    color: color-mix(in srgb, #FFFFFF 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-paper) 40%, transparent);
-    }
-  }
-  .text-paper\/50 {
-    color: color-mix(in srgb, #FFFFFF 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-paper) 50%, transparent);
-    }
-  }
-  .text-paper\/60 {
-    color: color-mix(in srgb, #FFFFFF 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-paper) 60%, transparent);
-    }
-  }
-  .text-paper\/70 {
-    color: color-mix(in srgb, #FFFFFF 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-paper) 70%, transparent);
-    }
-  }
-  .text-sky-neon {
-    color: var(--color-sky-neon);
-  }
-  .text-sky-neon\/40 {
-    color: color-mix(in srgb, #38BDF8 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-sky-neon) 40%, transparent);
-    }
-  }
-  .antialiased {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .backdrop-blur-sm {
-    --tw-backdrop-blur: blur(var(--blur-sm));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .transition-colors {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  @media (hover: hover) {
-    .hover\:bg-mint:hover {
-      background-color: var(--color-mint);
-    }
-    .hover\:bg-sky-neon:hover {
-      background-color: var(--color-sky-neon);
-    }
-    .hover\:text-ink:hover {
-      color: var(--color-ink);
-    }
-    .hover\:text-mint:hover {
-      color: var(--color-mint);
-    }
-    .hover\:text-sky-neon:hover {
-      color: var(--color-sky-neon);
-    }
-  }
-  @media (width >= 40rem) {
-    .sm\:flex-row {
-      flex-direction: row;
-    }
-  }
-  @media (width >= 48rem) {
-    .md\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    .md\:text-7xl {
-      font-size: var(--text-7xl);
-      line-height: var(--tw-leading, var(--text-7xl--line-height));
-    }
-  }
-  @media (width >= 64rem) {
-    .lg\:mx-0 {
-      margin-inline: 0px;
-    }
-    .lg\:flex-row {
-      flex-direction: row;
-    }
-  }
-}
-@property --tw-space-y-reverse {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-space-y-reverse: 0;
-      --tw-border-style: solid;
-      --tw-leading: initial;
-      --tw-font-weight: initial;
-      --tw-backdrop-blur: initial;
-      --tw-backdrop-brightness: initial;
-      --tw-backdrop-contrast: initial;
-      --tw-backdrop-grayscale: initial;
-      --tw-backdrop-hue-rotate: initial;
-      --tw-backdrop-invert: initial;
-      --tw-backdrop-opacity: initial;
-      --tw-backdrop-saturate: initial;
-      --tw-backdrop-sepia: initial;
-    }
-  }
-}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
-
-<style type="text/tailwindcss">
-@theme {
-  --color-mint: #10B981;
-  --color-slate-deep: #1E293B;
-  --color-sky-neon: #38BDF8;
-  --color-ink: #0A0F0D;
-  --color-paper: #FFFFFF;
-  --font-sans: "Space Grotesk", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-}
-</style>
-
-<link rel="stylesheet" href="style.css">
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-
-  /* =====================================================================
-     SNAKE GAME — written for a beginner to read top to bottom.
-     Every variable and function has a comment explaining its job.
-     Read them in order: CONSTANTS → STATE → HELPERS → GAME LOOP → INPUT.
-     ===================================================================== */
-
-  // ----- CONSTANTS (settings you can tweak and experiment with) -----
-  const GRID = 20;            // the board is GRID x GRID cells
-  const CELL = 24;            // each cell is CELL pixels wide/tall
-  const TICK_MS = 120;        // how often the snake moves (lower = faster)
-
-  // ----- CANVAS SETUP -----
-  const canvas = document.getElementById('game-canvas');
-  const ctx = canvas.getContext('2d');   // ctx is our "paintbrush" for drawing
-  canvas.width = GRID * CELL;
-  canvas.height = GRID * CELL;
-
-  // ----- DOM ELEMENTS we update on screen -----
-  const scoreEl = document.getElementById('score');
-  const bestEl = document.getElementById('best');
-  const messageEl = document.getElementById('game-message');
-  const finalScoreEl = document.getElementById('final-score');
-  const restartBtn = document.getElementById('restart-btn');
-  const pauseBtn = document.getElementById('pause-btn');
-
-  // ----- GAME STATE (the variables that describe the game right now) -----
-  let snake;                  // array of {x, y} cells; snake[0] is the head
-  let direction;              // where the snake is currently moving
-  let nextDirection;          // buffered next move so quick turns feel responsive
-  let food;                   // {x, y} position of the food
-  let score;                  // food eaten so far
-  let best = Number(localStorage.getItem('ali-snake-best') || 0); // saved high score
-  let running = false;        // is the game currently playing?
-  let paused = false;         // is the game paused?
-  let loopId = null;          // id of the timer so we can stop it
-
-  bestEl.textContent = best;  // show the saved best score on load
-
-  // ----- reset() : set everything back to the starting position -----
-  function reset() {
-    snake = [{ x: 10, y: 10 }, { x: 9, y: 10 }, { x: 8, y: 10 }]; // 3-cell snake, moving right
-    direction = { x: 1, y: 0 };
-    nextDirection = { x: 1, y: 0 };
-    score = 0;
-    scoreEl.textContent = '0';
-    placeFood();
-    messageEl.classList.add('hidden');   // hide the "game over" overlay
-  }
-
-  // ----- placeFood() : pick a random empty cell for the food -----
-  function placeFood() {
-    // Keep guessing until we find a cell the snake is NOT occupying
-    do {
-      food = {
-        x: Math.floor(Math.random() * GRID),
-        y: Math.floor(Math.random() * GRID)
-      };
-    } while (snake.some(seg => seg.x === food.x && seg.y === food.y));
-  }
-
-  // ----- draw() : repaint the whole board -----
-  function draw() {
-    // 1. Background — a subtle checkerboard so the grid is visible
-    for (let y = 0; y < GRID; y++) {
-      for (let x = 0; x < GRID; x++) {
-        ctx.fillStyle = (x + y) % 2 === 0 ? '#0A0F0D' : '#0D1512';
-        ctx.fillRect(x * CELL, y * CELL, CELL, CELL);
-      }
-    }
-
-    // 2. Food — a glowing sky-blue dot
-    ctx.fillStyle = '#38BDF8';
-    ctx.shadowColor = '#38BDF8';
-    ctx.shadowBlur = 12;
-    ctx.beginPath();
-    ctx.arc(food.x * CELL + CELL / 2, food.y * CELL + CELL / 2, CELL / 3, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.shadowBlur = 0; // reset so the glow doesn't leak into the snake
-
-    // 3. Snake — mint green, head slightly brighter
-    snake.forEach((seg, i) => {
-      ctx.fillStyle = i === 0 ? '#34D399' : '#10B981';
-      const pad = 2; // small gap gives a nice "dotted blocks" retro look
-      ctx.fillRect(seg.x * CELL + pad, seg.y * CELL + pad, CELL - pad * 2, CELL - pad * 2);
-    });
-  }
-
-  // ----- step() : one "tick" of the game — move, eat, check for death -----
-  function step() {
-    direction = nextDirection; // apply the buffered turn
-
-    // Calculate the new head position
-    const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
-
-    // WALL COLLISION: outside the grid = game over
-    if (head.x < 0 || head.x >= GRID || head.y < 0 || head.y >= GRID) return gameOver();
-
-    // SELF COLLISION: running into your own body = game over
-    if (snake.some(seg => seg.x === head.x && seg.y === head.y)) return gameOver();
-
-    // Add the new head to the front of the snake
-    snake.unshift(head);
-
-    // Did we eat the food?
-    if (head.x === food.x && head.y === food.y) {
-      score++;                                  // grow: we do NOT remove the tail
-      scoreEl.textContent = score;
-      placeFood();                              // spawn new food
-      if (score > best) {                       // update the high score
-        best = score;
-        bestEl.textContent = best;
-        localStorage.setItem('ali-snake-best', best);
-      }
-    } else {
-      snake.pop();                              // no food eaten → remove the tail
-    }
-
-    draw(); // repaint with the new positions
-  }
-
-  // ----- gameOver() : stop the loop and show the overlay -----
-  function gameOver() {
-    running = false;
-    clearInterval(loopId);
-    finalScoreEl.textContent = score;
-    messageEl.classList.remove('hidden');
-    draw(); // draw the final frame so the crash is visible
-  }
-
-  // ----- start() : begin (or restart) the game -----
-  function start() {
-    reset();
-    running = true;
-    paused = false;
-    pauseBtn.textContent = 'Pause';
-    clearInterval(loopId);
-    loopId = setInterval(step, TICK_MS); // setInterval calls step() every TICK_MS
-    draw();
-  }
-
-  // ----- togglePause() : freeze / unfreeze the game with Space or the button -----
-  function togglePause() {
-    if (!running) return; // can't pause a game that isn't playing
-    paused = !paused;
-    if (paused) {
-      clearInterval(loopId);
-      pauseBtn.textContent = 'Resume';
-    } else {
-      loopId = setInterval(step, TICK_MS);
-      pauseBtn.textContent = 'Pause';
-    }
-  }
-
-  // ----- setDirection() : safely queue a turn (reversing into yourself is ignored) -----
-  function setDirection(dx, dy) {
-    if (dx === -direction.x && dy === -direction.y) return; // no 180° turns
-    nextDirection = { x: dx, y: dy };
-  }
-
-  // ----- KEYBOARD INPUT : arrow keys, WASD, and Space to pause -----
-  document.addEventListener('keydown', (e) => {
-    const k = e.key;
-    if (k === 'ArrowUp'    || k === 'w') setDirection(0, -1);
-    else if (k === 'ArrowDown'  || k === 's') setDirection(0, 1);
-    else if (k === 'ArrowLeft'  || k === 'a') setDirection(-1, 0);
-    else if (k === 'ArrowRight' || k === 'd') setDirection(1, 0);
-    else if (k === ' ') { e.preventDefault(); togglePause(); }
-    // Arrow keys scroll the page — stop that while playing
-    if (k.startsWith('Arrow')) e.preventDefault();
-  });
-
-  // ----- MOUSE / TOUCH INPUT : the on-screen D-pad buttons -----
-  // Each button has data-dx / data-dy telling us which way it points.
-  document.querySelectorAll('.dpad-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      setDirection(Number(btn.dataset.dx), Number(btn.dataset.dy));
-    });
-  });
-
-  // ----- BUTTONS -----
-  restartBtn.addEventListener('click', start);
-  pauseBtn.addEventListener('click', togglePause);
-
-  // ----- Draw the very first frame so the board isn't empty on page load -----
-  reset();
-  draw();
-
-  /* =====================================================================
-     End of game code. Scroll down in the HTML to see how the page
-     around the game is built — reading real code is the best tutor!
-     ===================================================================== */
-
-  // --- Fade-in-on-scroll for the educational sections ---
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-});
-</script>
-  </a></div>
-
-  <!-- ============ HEADER ============ -->
-  <header class="border-b border-mint/20">
-    <nav class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
-      <span class="font-mono text-mint font-bold">~/ali-akan</span>
-      <div class="flex gap-6 text-sm font-mono">
-        <a href="blob:https://tiiny.host/f6728386-0070-4c30-84fa-9d8818232700#play" class="text-paper/70 hover:text-mint transition-colors">oyna</a>
-        <a href="#learn" class="text-paper/70 hover:text-sky-neon transition-colors">öğren</a>
-        <a href="#next" class="text-paper/70 hover:text-mint transition-colors">ileri</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- ============ HERO ============ -->
-  <section class="max-w-5xl mx-auto px-6 pt-20 pb-16">
-    <p class="font-mono text-sky-neon text-sm mb-4">$ benkimim</p>
-    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-      Merhaba,ben&nbsp;<span class="neon-text">Ali Akan</span>.
-    </h1>
-    <p class="mt-6 text-lg text-paper/70 max-w-2xl leading-relaxed">
-      İlk projem bu Yılan oyunu — Başlat'a basın ve en yüksek skorumu geçmeye çalışın.
-    </p>
-    <a href="#play" class="inline-block mt-8 font-mono border border-mint text-mint px-6 py-3 hover:bg-mint hover:text-ink transition-colors">
-      ▶ Oyna<br></a>
-    <p class="mt-12 font-mono text-mint/60 text-sm blink">Yönlendirmek için ok tuşlarından birine basın veya yön tuşlarına dokunun.</p>
-  </section>
-
-  <!-- ============ GAME ============ -->
-  <section id="play" class="max-w-5xl mx-auto px-6 pb-24">
-    <div class="flex items-baseline justify-between mb-4">
-      <h2 class="text-2xl font-bold font-mono text-mint">yılan</h2>
-      <div class="font-mono text-sm flex gap-6">
-        <span class="text-paper/60">skor&nbsp;<span id="score" class="text-paper text-base">0</span></span>
-        <span class="text-paper/60">eniyiskor&nbsp;<span id="best" class="text-sky-neon text-base">10</span></span>
-      </div>
-    </div>
-
-    <div class="flex flex-col lg:flex-row gap-8 items-start">
-      <!-- The game board -->
-      <div class="relative game-glow border border-mint/30 rounded-lg bg-ink p-2 shrink-0 mx-auto lg:mx-0">
-        <canvas id="game-canvas" class="rounded block max-w-full h-auto" width="480" height="480"></canvas>
-        <!-- Game over / start overlay -->
-        <div id="game-message" class="absolute inset-0 flex flex-col items-center justify-center bg-ink/90 backdrop-blur-sm rounded-lg gap-4">
-          <p class="font-mono text-sky-neon text-xl">oyunbitti</p>
-          <p class="font-mono text-paper/60 text-sm">sonskor: <span id="final-score" class="text-mint text-base">0</span></p>
-          <button id="restart-btn" class="btn border-none bg-mint text-ink font-mono hover:bg-sky-neon transition-colors">yenidenbaşlat</button>
-        </div>
-      </div>
-
-      <!-- Controls panel -->
-      <div class="flex-1 w-full max-w-xs mx-auto lg:mx-0">
-        <div class="border border-slate-deep rounded-lg p-6 bg-slate-deep/30">
-          <h3 class="font-mono text-sm text-paper/60 mb-4">kontrol</h3>
-
-          <!-- On-screen D-pad: fully playable by mouse/touch -->
-          <div class="grid grid-cols-3 gap-2 w-fit mx-auto mb-6">
-            <div></div>
-            <button class="dpad-btn btn btn-sm border border-mint/40 bg-transparent text-mint font-mono" data-dx="0" data-dy="-1" aria-label="Up">▲</button>
-            <div></div>
-            <button class="dpad-btn btn btn-sm border border-mint/40 bg-transparent text-mint font-mono" data-dx="-1" data-dy="0" aria-label="Left">◀</button>
-            <button id="pause-btn" class="btn btn-sm border border-sky-neon/40 bg-transparent text-sky-neon font-mono">dur</button>
-            <button class="dpad-btn btn btn-sm border border-mint/40 bg-transparent text-mint font-mono" data-dx="1" data-dy="0" aria-label="Right">▶</button>
-            <div></div>
-            <button class="dpad-btn btn btn-sm border border-mint/40 bg-transparent text-mint font-mono" data-dx="0" data-dy="1" aria-label="Down">▼</button>
-            <div></div>
-          </div>
-
-          <ul class="font-mono text-xs text-paper/50 space-y-2 leading-relaxed">
-            <li class=""><span class="text-mint">↑↓←→</span>&nbsp;yada&nbsp;<span class="text-mint">WASD</span> — yönlendir</li>
-            <li class=""><font color="#38bdf8" class="">boşluk</font> — dur / yenidenbaşlat</li>
-            <li class=""><font color="#38bdf8" class="">tıkla-</font></li>
-          </ul>
-        </div>
-
-        <button id="restart-btn" class="hidden"></button>
-        <button onclick="document.getElementById('restart-btn2')?.click()" class="hidden" id="restart-btn2"></button>
-        <a href="#play" onclick="setTimeout(()=>{},0)" class="hidden"></a>
-        <button id="start-btn" class="btn w-full mt-4 border-none bg-mint text-ink font-mono hover:bg-sky-neon transition-colors" onclick="document.getElementById('restart-btn').click()">▶ oyunubaşlat</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="border-t border-mint/20">
-    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="font-mono text-xs text-paper/40">Ali</p>
-    </div>
-  </footer>
-
-
-<div style="height: 55px !important;"></div></body></html>
+<!doctype html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BRAWL GUESS · Oyna</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,Arial;background:#10172f;color:#fff}body.light{background:#eef2ff;color:#14203c}button,input,select{font:inherit}button{cursor:pointer}header{background:#172345;padding:17px 4%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:4}header b{font-size:24px;color:#ffd43b}nav{display:flex;flex-wrap:wrap;gap:8px}nav button,.small{border:1px solid #566487;background:#24345b;color:white;padding:9px 13px;border-radius:12px}main{max-width:1100px;margin:auto;padding:26px 18px;min-height:80vh}h1{font-size:clamp(32px,6vw,62px);margin:8px 0;color:#ffd43b}h2{font-size:28px}.hero{background:linear-gradient(115deg,#1c3266,#312057);padding:35px;border-radius:26px;margin-bottom:25px}.hero p{font-size:18px}.cards,.grid,.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}.card,.panel{background:#1b284b;border:1px solid #415482;border-radius:20px;padding:20px;margin-bottom:14px;color:#fff}.card h2{margin:8px 0}.card .emoji{font-size:55px}.btn{background:#ffd43b;color:#171e35;border:0;border-radius:12px;padding:12px 18px;font-weight:900;margin:5px 6px 5px 0;box-shadow:0 4px #ad8015}.btn.blue{background:#2389ff;color:#fff;box-shadow:0 4px #1255a1}.muted{color:#b6c7e7}.pill{display:inline-block;background:#314570;padding:6px 10px;border-radius:12px;margin:4px}.search{width:100%;padding:14px;background:#fff;border:2px solid #2389ff;border-radius:12px;color:#10172f}.suggest{max-height:245px;overflow:auto;background:#24345b;border-radius:12px;margin-top:5px}.suggest button{display:flex;align-items:center;gap:12px;width:100%;padding:10px;background:transparent;border:0;color:#fff;text-align:left}.suggest button:hover,.suggest button:focus{background:#3558a0}.avatar{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:50%;background:linear-gradient(140deg,#9146ff,#2389ff);font-size:30px;flex-shrink:0}.avatar.big{width:145px;height:145px;font-size:80px}.avatar.shadow{filter:brightness(0);transition:filter .4s}.result{background:#233c66;text-align:center;border:2px solid #ffd43b;border-radius:22px;padding:22px;margin-top:18px}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}.cell{padding:10px;border-radius:9px;background:#ff4757;font-size:13px}.cell.right{background:#178f4c}.cell.partial{background:#c59c10}.compare{overflow:auto}.compare .row{flex-wrap:nowrap;min-width:680px}.compare .cell{flex:1;text-align:center}.filters{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}.filters input,.filters select{padding:12px;border-radius:10px;border:0}.collection-card{border:1px solid #526392;background:#23365f;border-radius:16px;padding:15px;color:white;cursor:pointer}.collection-card .avatar{margin-bottom:8px}.footer{text-align:center;color:#b5c2dd;padding:25px;font-size:13px}.notice{color:#ffd43b}.hidden{display:none}body.light .panel,body.light .card{background:#24365d}body.light .hero{color:white}@media(max-width:600px){header{position:static}nav button{font-size:12px;padding:7px}main{padding:14px}.hero{padding:22px}}</style></head><body><div id="root"></div><script>const RAW=[]=[
+['shelly','Shelly','Başlangıç','Hasar','Orta','Normal',2017,'Geniş alana saçma atan tüfeğiyle ateş eder.','Güçlü bir saçma patlaması engelleri parçalar.',['🔫','💜','💥','👢','🌪️'],0],
+['nita','Nita','Nadir','Hasar','Orta','Normal',2017,'Yere doğru ilerleyen şok dalgası gönderir.','Büyük ayısı Bruce savaş alanına gelir.',['🐻','🧸','🌊','👧','🐾'],1],
+['colt','Colt','Nadir','Hasar','Uzun','Normal',2017,'İki tabancasından seri mermiler yollar.','Uzun menzilli güçlü bir mermi yağmuru yapar.',['🔫','🔫','👦','💈','🎯'],2],
+['bull','Bull','Nadir','Tank','Kısa','Hızlı',2017,'Yakından yüksek hasarlı pompalı tüfek kullanır.','İleri doğru hızla koşup engelleri kırar.',['🐂','💪','🏃','🔫','💥'],3],
+['brock','Brock','Nadir','Nişancı','Uzun','Normal',2017,'Uzun menzilli roket fırlatır.','Bir bölgeye roket yağmuru yağdırır.',['🚀','🔥','🎯','💣','🕶️'],4],
+['elprimo','El Primo','Nadir','Tank','Kısa','Hızlı',2017,'Rakiplerine yumruk kombinasyonu yapar.','Havaya sıçrayıp rakiplerin üzerine iner.',['🤼','💪','👊','🦸','🌟'],5],
+['barley','Barley','Nadir','Topçu','Uzun','Normal',2017,'Şişe fırlatıp yerde hasar veren birikinti bırakır.','Geniş bir alana yanıcı şişeler atar.',['🍾','🤖','🔥','🥂','🎩'],6],
+['poco','Poco','Nadir','Destek','Uzun','Normal',2017,'Gitarından müzik dalgası yollar.','Müzik çalarak takım arkadaşlarını iyileştirir.',['🎸','🎶','💀','💚','🎵'],7],
+['rosa','Rosa','Nadir','Tank','Kısa','Hızlı',2019,'Yakın mesafeden yumruk atar.','Kısa süreliğine koruyucu bitki kalkanı açar.',['🌹','🥊','🌿','🛡️','🌱'],8],
+['jessie','Jessie','Süper Nadir','Kontrol','Uzun','Normal',2017,'Rakipler arasında seken enerji küresi atar.','Scrappy adında bir taret kurar.',['🔧','⚡','🤖','👧','🔩'],9],
+['dynamike','Dynamike','Süper Nadir','Topçu','Uzun','Hızlı',2017,'İki dinamit çubuğu fırlatır.','Büyük bir patlayıcı varil atar.',['🧨','💣','👴','⛏️','💥'],10],
+['tick','Tick','Süper Nadir','Topçu','Uzun','Normal',2019,'Yere üç mayın fırlatır.','Takip eden patlayıcı kafasını gönderir.',['💣','🤖','⏰','🧠','💥'],11],
+['8bit','8-Bit','Süper Nadir','Hasar','Uzun','Yavaş',2019,'Lazer ışınları ateşler.','Hasarı artıran bir güç istasyonu kurar.',['🕹️','👾','🎮','🔫','8️⃣'],12],
+['rico','Rico','Süper Nadir','Hasar','Uzun','Normal',2017,'Duvarlardan seken mermiler ateşler.','Çok sayıda seken mermi yağdırır.',['🤖','🔵','🎱','🔫','↪️'],13],
+['darryl','Darryl','Süper Nadir','Tank','Kısa','Normal',2017,'İki namlulu tüfeklerle yakından ateş eder.','Varil gibi yuvarlanarak ilerler.',['🛢️','🏴‍☠️','🔫','🌊','🦀'],14],
+['penny','Penny','Süper Nadir','Topçu','Uzun','Normal',2018,'Para kesesi fırlatır.','Uzaktan bombardıman yapan top kurar.',['🏴‍☠️','🪙','💰','💣','🚢'],15],
+['carl','Carl','Süper Nadir','Hasar','Uzun','Normal',2019,'Geri dönen kazmasını fırlatır.','Kazmasını döndürerek hızla saldırır.',['⛏️','💎','🪨','🛒','🔄'],16],
+['jacky','Jacky','Süper Nadir','Tank','Kısa','Hızlı',2020,'Matkapla çevresindeki zemini sarsar.','Yakındaki düşmanları kendine çeker.',['🚧','🔨','⛏️','🦺','🌪️'],17],
+['piper','Piper','Destansı','Nişancı','Uzun','Normal',2017,'Şemsiyesinden uzak mesafeli mermi atar.','Havaya zıplayıp el bombaları bırakır.',['☂️','🎯','💗','💣','👒'],18],
+['pam','Pam','Destansı','Destek','Uzun','Normal',2017,'Hurda parçaları fırlatır.','Takımı iyileştiren bir istasyon kurar.',['🔧','❤️','🛠️','🤖','👩'],19],
+['frank','Frank','Destansı','Tank','Kısa','Hızlı',2018,'Çekiciyle yere vurup şok dalgası yaratır.','Güçlü vuruşuyla düşmanları sersemletir.',['🔨','🧟','⚡','💪','🎧'],20],
+['bibi','Bibi','Destansı','Tank','Kısa','Çok hızlı',2019,'Beyzbol sopasıyla savurur.','Seken dev bir sakız balonu yollar.',['⚾','🫧','🧢','💥','🍬'],21],
+['bea','Bea','Destansı','Nişancı','Uzun','Normal',2019,'İsabet ettikçe güçlenen arı iğnesi atar.','Yavaşlatan arı sürüsü gönderir.',['🐝','🍯','🌼','🎯','🟡'],22],
+['edgar','Edgar','Destansı','Suikastçı','Kısa','Çok hızlı',2020,'Atkısıyla yakın mesafede vurup can yeniler.','Hızla zıplayarak rakibe yaklaşır.',['🧣','🖤','🤸','👊','🌑'],23],
+['mortis','Mortis','Efsanevi','Suikastçı','Kısa','Çok hızlı',2017,'Küreğiyle ileri atılıp vurur.','Yarasalar göndererek can yeniler.',['🦇','⚰️','🪦','🧛','🌙'],24],
+['crow','Crow','Efsanevi','Suikastçı','Uzun','Çok hızlı',2017,'Zehirli hançerler fırlatır.','Havaya sıçrayıp zehirli hançer yağdırır.',['🐦‍⬛','☠️','🗡️','💚','🪽'],25],
+['spike','Spike','Efsanevi','Hasar','Uzun','Normal',2017,'Patlayınca diken saçan kaktüs bombası atar.','Yavaşlatan dikenli bir alan oluşturur.',['🌵','🌵','💚','🌵','💥'],26],
+['leon','Leon','Efsanevi','Suikastçı','Uzun','Çok hızlı',2018,'Dönen bıçaklar fırlatır.','Kısa süre görünmez olur.',['🦎','👻','🗡️','🧥','💨'],27],
+['sandy','Sandy','Efsanevi','Kontrol','Orta','Normal',2019,'Kum taneleri savurur.','Takımını gizleyen kum fırtınası yaratır.',['😴','🏜️','🌪️','💤','🌙'],28],
+['amber','Amber','Efsanevi','Kontrol','Uzun','Normal',2020,'Kesintisiz alev püskürtür.','Yere döktüğü yakıtı ateşe verir.',['🔥','🛢️','🌶️','💃','🔥'],29]
+];
+RAW.push(["alli", "Alli", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 1]);
+RAW.push(["angelo", "Angelo", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 3]);
+RAW.push(["ash", "Ash", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 4]);
+RAW.push(["belle", "Belle", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 7]);
+RAW.push(["berry", "Berry", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 8]);
+RAW.push(["bo", "Bo", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 10]);
+RAW.push(["bolt", "Bolt", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 11]);
+RAW.push(["bonnie", "Bonnie", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 12]);
+RAW.push(["buster", "Buster", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 15]);
+RAW.push(["buzz", "Buzz", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 16]);
+RAW.push(["byron", "Byron", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 17]);
+RAW.push(["charlie", "Charlie", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 19]);
+RAW.push(["chester", "Chester", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 20]);
+RAW.push(["chuck", "Chuck", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 21]);
+RAW.push(["clancy", "Clancy", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 22]);
+RAW.push(["colette", "Colette", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 23]);
+RAW.push(["cordelius", "Cordelius", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 25]);
+RAW.push(["cosmo", "Cosmo", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 26]);
+RAW.push(["damian", "Damian", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 28]);
+RAW.push(["doug", "Doug", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 0]);
+RAW.push(["draco", "Draco", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 1]);
+RAW.push(["emz", "Emz", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 5]);
+RAW.push(["eve", "Eve", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 6]);
+RAW.push(["fang", "Fang", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 7]);
+RAW.push(["finx", "Finx", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 8]);
+RAW.push(["gale", "Gale", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 10]);
+RAW.push(["gene", "Gene", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 11]);
+RAW.push(["gigi", "Gigi", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 12]);
+RAW.push(["glowy", "Glowy", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 13]);
+RAW.push(["gray", "Gray", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 14]);
+RAW.push(["griff", "Griff", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 15]);
+RAW.push(["grom", "Grom", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 16]);
+RAW.push(["gus", "Gus", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 17]);
+RAW.push(["hank", "Hank", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 18]);
+RAW.push(["janet", "Janet", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 21]);
+RAW.push(["juju", "Juju", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 23]);
+RAW.push(["kaze", "Kaze", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 24]);
+RAW.push(["kenji", "Kenji", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 25]);
+RAW.push(["kit", "Kit", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 26]);
+RAW.push(["lily", "Lily", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 29]);
+RAW.push(["lola", "Lola", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 0]);
+RAW.push(["lou", "Lou", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 1]);
+RAW.push(["lumi", "Lumi", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 2]);
+RAW.push(["maisie", "Maisie", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 3]);
+RAW.push(["mandy", "Mandy", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 4]);
+RAW.push(["max", "Max", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 5]);
+RAW.push(["meeple", "Meeple", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 6]);
+RAW.push(["meg", "Meg", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 7]);
+RAW.push(["melodie", "Melodie", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 8]);
+RAW.push(["mico", "Mico", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 9]);
+RAW.push(["mina", "Mina", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 10]);
+RAW.push(["moe", "Moe", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 11]);
+RAW.push(["najia", "Najia", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 14]);
+RAW.push(["nani", "Nani", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 15]);
+RAW.push(["nori", "Nori", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 17]);
+RAW.push(["ollie", "Ollie", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 18]);
+RAW.push(["otis", "Otis", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 19]);
+RAW.push(["pearl", "Pearl", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 21]);
+RAW.push(["pierce", "Pierce", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 23]);
+RAW.push(["ruffs", "Ruffs", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 29]);
+RAW.push(["sam", "Sam", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 0]);
+RAW.push(["shade", "Shade", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 2]);
+RAW.push(["sirius", "Sirius", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 4]);
+RAW.push(["sprout", "Sprout", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 6]);
+RAW.push(["squeak", "Squeak", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 7]);
+RAW.push(["stu", "Stu", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 9]);
+RAW.push(["surge", "Surge", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 10]);
+RAW.push(["tara", "Tara", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 11]);
+RAW.push(["trunk", "Trunk", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 13]);
+RAW.push(["vince", "Vince", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 14]);
+RAW.push(["wendy", "Wendy", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 15]);
+RAW.push(["willow", "Willow", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 16]);
+RAW.push(["ziggy", "Ziggy", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 17]);
+RAW.push(["rt", "R-T", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 0]);
+RAW.push(["larrylawrie", "Larry & Lawrie", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 0]);
+RAW.push(["mrp", "Mr. P", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 0]);
+RAW.push(["jaeyong", "Jae-yong", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 0]);
+RAW.push(["starrnova", "Starr Nova", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", "Bilinmiyor", null, "Bilgi doğrulanmadı.", "Bilgi doğrulanmadı.", [], 0]);
+const B=RAW.map(([id,name,rarity,role,range,speed,year,attack,sup,emoji,shape])=>({id,name,rarity,role,range,speed,year,attack,super:sup,emoji,shape}));const modes=[{id:'classic',name:'KLASİK MOD',icon:'🎯',desc:'Özellikleri karşılaştır, gizli karakteri bul.',color:'#2389FF'},{id:'emoji',name:'EMOJİ MODU',icon:'🧩',desc:'Emojilerin anlattığı Brawler kim?',color:'#9146FF'},{id:'silhouette',name:'SİLÜET MODU',icon:'👤',desc:'Gölgenin ardındaki karakteri keşfet.',color:'#FF4757'},{id:'ability',name:'YETENEK MODU',icon:'⚡',desc:'Saldırı ve süper yeteneklerden tahmin et.',color:'#35D878'}];const MAX=6;const key='bg-standalone-v1';let state;try{state=JSON.parse(localStorage.getItem(key))}catch{}state=state||{games:{},history:[],unlocked:[],settings:{dark:true,sound:true}};let page='home',gameKey='',query='',filter='',rarity='',role='';const $=s=>document.querySelector(s),save=()=>localStorage.setItem(key,JSON.stringify(state));const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Istanbul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());function hash(s){let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}const verified=B.filter(b=>b.emoji.length>=3&&b.year);const targetFor=(m,d)=>verified[hash('brawlguess-v1:'+d+':'+m)%verified.length];function avatar(b,big=false,shadow=false){return `<span class="avatar ${big?'big':''} ${shadow?'shadow':''}" style="${shadow?'filter:brightness(0)':''}">${['🤠','🐻','🔫','💪','🚀','🥊','🍾','🎸','🧨','🎯'][b.shape%10]}</span>`}function start(m,daily){const date=today(),k=daily?`daily:${date}:${m}`:`practice:${m}:${Date.now()}:${Math.random()}`;if(!state.games[k])state.games[k]={key:k,mode:m,daily,date,target:(daily?targetFor(m,date):verified[Math.floor(Math.random()*verified.length)]).id,guesses:[],done:false,won:false};gameKey=k;query='';save();go('game')}function go(p){page=p;render();window.scrollTo(0,0)}function current(){return state.games[gameKey]}function submit(id){const g=current();if(!g||g.done||g.guesses.includes(id))return;g.guesses.push(id);g.won=id===g.target;g.done=g.won||g.guesses.length===MAX;if(g.done){state.history.push({key:g.key,mode:g.mode,daily:g.daily,date:g.date,won:g.won,attempts:g.guesses.length,target:g.target});if(g.won&&!state.unlocked.includes(g.target))state.unlocked.push(g.target)}query='';save();render()}function compare(b,t){return [['Nadirlik',b.rarity,b.rarity===t.rarity?'right':'wrong'],['Sınıf',b.role,b.role===t.role?'right':'wrong'],['Menzil',b.range,b.range===t.range?'right':'wrong'],['Hız',b.speed,b.speed===t.speed?'right':'wrong'],['Çıkış',b.year+(b.year<t.year?' ↑':b.year>t.year?' ↓':''),b.year===t.year?'right':Math.abs(b.year-t.year)<=2?'partial':'wrong']]}function count(){const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Istanbul',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).format(new Date()).split(':').map(Number);let s=86400-p[0]*3600-p[1]*60-p[2];return [Math.floor(s/3600),Math.floor(s%3600/60),s%60].map(x=>String(x).padStart(2,'0')).join(':')}function rate(a){return a.length?Math.round(a.filter(x=>x.won).length/a.length*100):0}function shell(s){$('#root').innerHTML=s;document.body.classList.toggle('light',!state.settings.dark)}function home(){const wins=state.history.filter(x=>x.won).length;return `<div class="hero"><small>★ GÜNLÜK BRAWLER MÜCADELESİ ★</small><h1>BRAWLER'I TAHMİN ET!</h1><p>Dört farklı modda ipuçlarını çöz ve karakterleri keşfet!</p><button class="btn" onclick="start('classic',true)">⚡ GÜNLÜK OYNA</button><button class="btn blue" onclick="go('help')">NASIL OYNANIR?</button></div><div class="panel">🏆 Bugünün mücadelesi · <b id="timer">${count()}</b> sonra yenileniyor · ${modes.filter(m=>state.games[`daily:${today()}:${m.id}`]?.done).length}/4 tamamlandı</div><div class="panel">🏆 ${wins} galibiyet · 🎮 ${state.history.length} tamamlanan oyun</div>${modeCards()}`}function modeCards(){return `<h2>🎮 OYUN MODLARI</h2><div class="cards">${modes.map(m=>`<div class="card"><div class="emoji">${m.icon}</div><h2>${m.name}</h2><p>${m.desc}</p><button class="btn" onclick="start('${m.id}',true)">${state.games[`daily:${today()}:${m.id}`]?.done?'SONUCU GÖR':'GÜNLÜK OYNA'}</button><button class="btn blue" onclick="start('${m.id}',false)">PRATİK</button></div>`).join('')}</div>`}function game(){const g=current();if(!g)return home();const t=B.find(x=>x.id===g.target),m=modes.find(x=>x.id===g.mode);let clue='';if(g.mode==='emoji')clue=`<div class="panel"><h2>${t.emoji.slice(0,Math.min(5,3+g.guesses.length)).join('　')}</h2><p>Her yanlış tahminde yeni emoji açılır.</p></div>`;if(g.mode==='silhouette')clue=`<div class="panel" style="text-align:center">${avatar(t,true,!g.done)}<p>${g.guesses.length>=3?'Sınıf: '+t.role:'Gizli karakterin silüeti'} ${g.guesses.length>=4?' · '+t.rarity:''}</p><small class="muted">Temsili avatar silüeti</small></div>`;if(g.mode==='ability')clue=`<div class="panel"><h3>⚡ Bu yetenek kime ait?</h3><p>${t.attack}</p>${g.guesses.length>=2?`<p>🌟 Süper: ${t.super}</p>`:''}${g.guesses.length>=4?`<p>💡 ${t.role} · ${t.range}</p>`:''}</div>`;const rows=g.guesses.length?`<h2>Tahminler (${g.guesses.length})</h2>${g.mode==='classic'?`<div class="compare">${[...g.guesses].reverse().map(id=>{const b=B.find(x=>x.id===id);return `<div class="row"><span class="cell" style="background:#314570">${b.name}</span>${compare(b,t).map(c=>`<span class="cell ${c[2]}">${c[0]}<br><b>${c[1]}</b></span>`).join('')}</div>`}).join('')}</div>`:g.guesses.map(id=>`<span class="pill">${B.find(x=>x.id===id).name} ${id===g.target?'✓':'✕'}</span>`).join('')}`:'';const result=g.done?`<div class="result"><h1>${g.won?'🎉 KAZANDIN!':'💫 OYUN BİTTİ'}</h1>${avatar(t,true)}<h2>${t.name}</h2><p>${g.guesses.length}/${MAX} tahmin</p><button class="btn blue" onclick="share()">SONUCU PAYLAŞ</button>${!g.daily?`<button class="btn" onclick="start('${g.mode}',false)">YENİDEN OYNA</button>`:''}<button class="btn" onclick="go('modes')">MODLAR</button></div>`:'';return `<button class="small" onclick="go('modes')">← Modlara dön</button><h1>${m.icon} ${m.name}</h1><p>${g.daily?'📅 Günlük':'♾️ Pratik'} · ${g.guesses.length}/${MAX} tahmin</p>${clue}${!g.done?`<div class="panel"><label for="search">BRAWLER TAHMİNİ</label><input id="search" class="search" autocomplete="off" placeholder="Brawler adı yaz..." value="${query.replaceAll('"','&quot;')}" oninput="suggest(this.value)" onkeydown="keypick(event)"><div class="suggest" id="suggest"></div></div>`:''}${rows}${result}`}function suggest(v){query=v;const g=current(),items=B.filter(b=>!g.guesses.includes(b.id)&&b.name.toLocaleLowerCase('tr').includes(v.toLocaleLowerCase('tr'))).slice(0,8);$('#suggest').innerHTML=v.trim()?items.map(b=>`<button onclick="submit('${b.id}')">${avatar(b)} <span>${b.name}<br><small>${b.rarity} · ${b.role}</small></span></button>`).join('')||'<p>Karakter bulunamadı</p>':''}function keypick(e){if(e.key==='Enter'){const first=$('#suggest button');if(first)first.click()}}function share(){const g=current(),t=B.find(b=>b.id===g.target);const lines=g.guesses.map(id=>{const b=B.find(x=>x.id===id);return g.mode==='classic'?compare(b,t).map(c=>c[2]==='right'?'🟩':c[2]==='partial'?'🟨':'🟥').join(''):id===g.target?'🟩🟩🟩':'🟥🟥🟥'});const txt=`BRAWL GUESS ${g.date} ${g.mode}\n${g.won?g.guesses.length:'X'}/${MAX}\n${lines.join('\n')}`;if(navigator.clipboard&&location.protocol!=='file:')navigator.clipboard.writeText(txt).then(()=>alert('Kopyalandı')).catch(()=>prompt('Sonucu kopyala:',txt));else prompt('Sonucu kopyala:',txt)}function statistics(){const a=state.history,w=a.filter(x=>x.won);return `<h1>📊 İSTATİSTİKLER</h1><div class="stats">${[['Toplam oyun',a.length],['Galibiyet',w.length],['Kazanma oranı',rate(a)+'%'],['Ortalama tahmin',w.length?(w.reduce((s,x)=>s+x.attempts,0)/w.length).toFixed(1):'—']].map(x=>`<div class="card"><h2>${x[1]}</h2>${x[0]}</div>`).join('')}</div><h2>Mod istatistikleri</h2><div class="grid">${modes.map(m=>{let r=a.filter(x=>x.mode===m.id);return `<div class="card"><h3>${m.icon} ${m.name}</h3><p>${r.length} oyun · ${rate(r)}% başarı</p><p>Günlük: ${r.filter(x=>x.daily).length} · Pratik: ${r.filter(x=>!x.daily).length}</p></div>`}).join('')}</div><h2>Son oyunlar</h2>${a.length?[...a].reverse().slice(0,15).map(x=>`<div class="panel">${x.won?'🏆':'❌'} ${x.mode} · ${B.find(b=>b.id===x.target)?.name} · ${x.attempts}/6 · ${x.date}</div>`).join(''):'<p>Henüz tamamlanan oyun yok.</p>'}`}function collection(){const items=B.filter(b=>b.name.toLocaleLowerCase('tr').includes(filter.toLocaleLowerCase('tr'))&&(!rarity||b.rarity===rarity)&&(!role||b.role===role));return `<h1>🗂️ KOLEKSİYON</h1><p>${state.unlocked.length}/${B.length} karakter keşfedildi</p><div class="filters"><input placeholder="Karakter ara" value="${filter}" oninput="filter=this.value;render()"><select onchange="rarity=this.value;render()"><option value="">Tüm nadirlikler</option>${[...new Set(B.map(b=>b.rarity))].map(x=>`<option ${rarity===x?'selected':''}>${x}</option>`).join('')}</select><select onchange="role=this.value;render()"><option value="">Tüm sınıflar</option>${[...new Set(B.map(b=>b.role))].map(x=>`<option ${role===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="grid">${items.map(b=>`<button class="collection-card" onclick="detail('${b.id}')">${avatar(b)}<h3>${b.name} ${state.unlocked.includes(b.id)?'🏆':''}</h3><small>${b.rarity} · ${b.role}</small></button>`).join('')}</div>${items.length?'':'Eşleşen karakter bulunamadı.'}`}function detail(id){const b=B.find(x=>x.id===id);$('#root').innerHTML=`<main><button class="small" onclick="go('collection')">← Koleksiyona dön</button><div class="panel">${avatar(b,true)}<h1>${b.name}</h1><p>${b.rarity} · ${b.role} · ${b.range} · ${b.speed} · ${b.year}</p><h3>Normal saldırı</h3><p>${b.attack}</p><h3>Süper yetenek</h3><p>${b.super}</p><p>${b.emoji.join(' ')}</p></div></main>`}function settings(){return `<h1>⚙️ AYARLAR</h1><div class="panel"><h2>Görünüm</h2><button class="btn" onclick="state.settings.dark=!state.settings.dark;save();render()">${state.settings.dark?'☀️ Açık temaya geç':'🌙 Koyu temaya geç'}</button></div><div class="panel"><h2>Ses</h2><button class="btn blue" onclick="state.settings.sound=!state.settings.sound;save();render()">${state.settings.sound?'🔊 Ses açık':'🔇 Ses kapalı'}</button></div><div class="panel"><p>İlerleme bu tarayıcıda localStorage ile saklanır.</p></div>`}function help(){return `<h1>🎮 NASIL OYNANIR?</h1><div class="panel"><p>Her oyunda 6 tahmin hakkın var. Karakter adını yazıp önerilerden seç.</p><p>🎯 Klasik: Yeşil doğru, kırmızı yanlış, sarı yakın çıkış yılı.</p><p>🧩 Emoji: Yanlış tahminlerde yeni emojiler açılır.</p><p>👤 Silüet: Temsili karakter simgesinin gölgesini ve ipuçlarını kullan.</p><p>⚡ Yetenek: Saldırı açıklamasını incele.</p><p>Günlük görevler İstanbul saatiyle gece yarısı yenilenir; pratik sınırsızdır.</p></div>`}function render(){shell(`<header><b>★ BRAWL GUESS</b><nav>${[['home','Ana Sayfa'],['modes','Oyun Modları'],['stats','İstatistikler'],['collection','Koleksiyon'],['settings','Ayarlar']].map(x=>`<button onclick="go('${x[0]}')">${x[1]}</button>`).join('')}</nav></header><main>${page==='home'?home():page==='modes'?modeCards():page==='game'?game():page==='stats'?statistics():page==='collection'?collection():page==='settings'?settings():help()}</main><div class="footer">Bağımsız hayran projesi. Supercell tarafından desteklenmez veya onaylanmaz. Temsili simgeler kullanılır.</div>`);if(page==='game'&&query&&$('#search'))suggest(query)}setInterval(()=>{const t=$('#timer');if(t)t.textContent=count();if(today()!==window._date){window._date=today();if(page==='home'||page==='modes')render()}},1000);window._date=today();render();</script></body></html>
